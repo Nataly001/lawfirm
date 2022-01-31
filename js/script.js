@@ -4,7 +4,7 @@ const buttonRight = document.getElementById("slide-right");
 const buttonLeft = document.getElementById("slide-left");
 
 buttonLeft.addEventListener("click", () =>{
-  slider.scrollLeft -= slider.clientWidth/3;
+  slider.scrollLeft -= slider.clientWidth;
 });
 
 buttonRight.addEventListener("click", () =>{

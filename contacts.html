@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+    <link rel="shortcut icon" href="img/justice.png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="fixed-menu">
+      <ul class="fixed-menu__link">
+        <li><a href="#">instagram</a></li>
+        <li><a href="#">facebook</a></li>
+      </ul>
+    </div>
+    <nav class="mobile-menu">
+      <input type="checkbox" id="checkbox" class="mobile-menu__checkbox" />
+      <label for="checkbox" class="mobile-menu__btn"
+        ><div class="mobile-menu__icon"></div
+      ></label>
+      <div class="mobile-menu__container">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Главная</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">О нас</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Области деятельности</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Команда</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Публикации</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <header class="header">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="logo" />
+        </a>
+        <nav>
+          <ul class="navigation">
+            <li class="navigation-item"><a href="index.html">Главная</a></li>
+            <li class="navigation-item"><a href="#">О нас</a></li>
+            <li class="navigation-item">
+              <a href="#">Области деятельности</a>
+            </li>
+            <li class="navigation-item"><a href="#">Команда</a></li>
+            <li class="navigation-item"><a href="#">Публикации</a></li>
+            <li class="navigation-item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="section">
+        <div class="container">
+          <div class="flex-container">
+            <div class="contact-list">
+              <div class="contact-list-item">
+                <div class="contact-icon"></div>
+                <div class="contacts">
+                  <span>Адрес:</span>
+                  <p>Тирасполь, ул.Ленина, 25</p>
+                </div>
+              </div>
+              <div class="contact-list-item">
+                <div class="contact-icon"></div>
+                <div class="contacts">
+                  <span>Контакты:</span>
+                  <p><a href="tel:+3732340505">+373 234 05 05</a></p>
+                  <p>
+                    <a href="mailto:lawfirm@mail.ru">lawfirm@mail.ru</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-list-item">
+                <div class="contact-icon"></div>
+                <div class="contacts">
+                  <span>Рабочие часы:</span>
+                  <table class="table">
+                    <tr>
+                      <td>Пн - Пт:</td>
+                      <td>с 9 до 18</td>
+                    </tr>
+                    <tr>
+                      <td>Сб:</td>
+                      <td>с 10 до 14</td>
+                    </tr>
+                    <tr>
+                      <td>Вс:</td>
+                      <td>выходной</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="section-block">
+              <span>Сообщение</span>
+              <h3 class="section-title heading">Получить консультацию</h3>
+              <div class="section-text">
+                <p class="paragrapf">Задайте вопрос юристу</p>
+              </div>
+              <div class="feedback">
+                <form name="feedback" method="POST" action="">
+                  <div class="feedback-group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Имя"
+                      required="required"
+                    />
+                    <input
+                      type="text"
+                      name="surname"
+                      placeholder="Фамилия"
+                      required="required"
+                    />
+                  </div>
+                  <div class="feedback-group">
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="Номер телефона"
+                      required="required"
+                    />
+                    <input type="email" name="email" placeholder="Email" />
+                  </div>
+                  <div class="feedback-group">
+                    <textarea name="message" placeholder="Сообщение"></textarea>
+                  </div>
+                  <div class="feedback-btn">
+                    <button
+                      type="submit"
+                      name="feedback_btn"
+                      value="Отправить сообщение"
+                    >
+                      Отправить сообщение
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="map"></div>
+    </div>
+  </body>
+</html>
