@@ -34,3 +34,5 @@ for (let i = 0; i < card.length; i++){
     return play = setInterval(autoPlay, 50);
   })
 }
+
+//MAP
