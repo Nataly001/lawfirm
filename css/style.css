@@ -47,7 +47,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Montserrat";
-  font-weight: medium;
+  font-weight: 500;
   box-sizing: border-box;
 }
 body {
@@ -245,23 +245,17 @@ ul {
   position: relative;
   width: 100%;
   display: flex;
-  padding: 60px 15px 0 250px;
+  padding-top: 60px;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   z-index: 10;
 }
-.header-abs {
+.absolut {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  padding: 60px 15px 0 250px;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
-  z-index: 10;
 }
 .logo {
   margin-right: 50px;
@@ -377,7 +371,7 @@ ul {
   scroll-snap-align: center;
 }
 .sec-block {
-  padding: 140px 0;
+  padding-top: 140px;
 }
 
 .overlay {
@@ -539,13 +533,18 @@ ul {
 .card:nth-child(even) {
   background: linear-gradient(180deg, #080a12 0%, rgba(25, 28, 38, 0) 100%);
 }
-.card-icon {
-  margin-bottom: 70px;
+.icon {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
 }
-.card-icon svg {
+.icon svg {
   width: 70px;
   height: 70px;
   fill: var(--paragrapf-color);
+}
+.card .icon {
+  margin-bottom: 70px;
 }
 .card-title {
   font-family: "MontserratAlternates";
@@ -855,14 +854,10 @@ ul {
 .contact-list-item:not(:last-child) {
   margin-bottom: 30px;
 }
-.contact-icon {
-  width: 70px;
-  height: 70px;
+.contact-list-item .icon {
   margin-right: 40px;
 }
-.contact-icon svg {
-  fill: var(--paragrapf-color);
-}
+
 #map {
   width: 100%;
   /* position: relative; */
@@ -878,9 +873,6 @@ ul {
   }
   .wrapper {
     padding-left: 100px;
-  }
-  .header {
-    padding: 60px 15px 0 115px;
   }
 }
 /* @media (max-width: 1375px) {
