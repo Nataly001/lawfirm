@@ -245,7 +245,7 @@ ul {
   position: relative;
   width: 100%;
   display: flex;
-  padding-top: 60px;
+  padding: 60px 0;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
@@ -371,7 +371,7 @@ ul {
   scroll-snap-align: center;
 }
 .sec-block {
-  padding-top: 140px;
+  padding-bottom: 140px;
 }
 
 .overlay {
@@ -901,7 +901,7 @@ ul {
     right: 15px;
   }
   .header {
-    padding: 60px 60px 0 15px;
+    padding: 60px 60px 60px 15px;
   }
   .header-nav {
     display: none;
