@@ -245,7 +245,8 @@ ul {
   position: relative;
   width: 100%;
   display: flex;
-  padding: 60px 0;
+  padding-top: 60px;
+  /* padding-bottom: 30px; */
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
@@ -301,9 +302,10 @@ ul {
 }
 .flex-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
+
 .heading {
   font-family: "MontserratAlternates";
   font-weight: bold;
@@ -370,8 +372,8 @@ ul {
   align-items: center;
   scroll-snap-align: center;
 }
-.sec-block {
-  padding-bottom: 140px;
+.section1 {
+  padding: 140px 0;
 }
 
 .overlay {
@@ -393,7 +395,7 @@ ul {
   top: 0;
   left: 0;
   width: 60%;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -484,8 +486,6 @@ ul {
 
 .services {
   display: block;
-  flex-basis: 800px;
-  flex-shrink: 0;
   margin-top: 60px;
   position: relative;
 }
@@ -516,12 +516,11 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  flex-basis: 280px;
+  /* flex-basis: 280px; */
   flex-basis: 25%;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   flex-shrink: 0;
   padding: 70px 30px 100px;
-  /* overflow: hidden; */
   background: linear-gradient(180deg, #191c26 0%, rgba(25, 28, 38, 0) 100%);
   /* transform: scale(0.95);
   transition: all 0.3s; */
@@ -609,7 +608,7 @@ ul {
   top: 0;
   left: 0;
   width: 60%;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -772,7 +771,7 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -860,8 +859,6 @@ ul {
 
 #map {
   width: 100%;
-  /* position: relative; */
-  /* z-index: 5; */
 }
 @media (max-width: 1650px) {
   .fixed-menu {
@@ -885,6 +882,9 @@ ul {
     max-width: 100%;
     margin-bottom: 60px;
     /* margin-top: 60px; */
+  }
+  .card {
+    flex-basis: 33.33%;
   }
 }
 @media (max-width: 1140px) {
@@ -925,9 +925,6 @@ ul {
   }
   .publications-secondary {
     margin-right: 0;
-  }
-  .card {
-    flex-basis: 33.33%;
   }
 }
 @media (max-width: 780px) {
