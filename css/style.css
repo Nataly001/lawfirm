@@ -56,7 +56,12 @@ body {
 ul {
   list-style: none;
 }
-
+a {
+  text-decoration: none;
+}
+html body a:focus {
+  outline: none;
+}
 /* MOBILE MENU */
 .fixed-menu {
   position: fixed;
@@ -230,19 +235,7 @@ ul {
   -webkit-transform: rotate(45deg);
 }
 /* END MOBILE MENU */
-.wrapper {
-  position: relative;
-  padding-left: 180px;
-  min-height: 100vh;
-  overflow: hidden;
-  overflow-y: auto;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-.bg-blue {
-  background: var(--dark-blue);
-}
+
 /* HEADER */
 .header {
   position: relative;
@@ -260,6 +253,18 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
+}
+.page-header {
+  justify-content: space-between;
+}
+.header-tel a {
+  color: var(--white);
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.header-tel a:hover {
+  color: var(--contrast-color);
 }
 .logo {
   margin-right: 50px;
@@ -294,34 +299,6 @@ ul {
 }
 
 /* END HEADER */
-
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  position: relative;
-  z-index: 2;
-}
-.flex-container {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.heading {
-  font-family: "MontserratAlternates";
-  font-weight: bold;
-  text-transform: capitalize;
-  color: var(--white);
-  margin-bottom: 30px;
-}
-.paragrapf {
-  font-size: 18px;
-  line-height: 150%;
-  color: var(--paragrapf-color);
-  margin-top: 20px;
-}
 
 /* MAIN BANNER */
 .main-overlay {
@@ -366,6 +343,46 @@ ul {
   background-color: var(--contrast-color);
 }
 /* END MAIN BANNER */
+.wrapper {
+  position: relative;
+  padding-left: 180px;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.bg-blue {
+  background: var(--dark-blue);
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.heading {
+  font-family: "MontserratAlternates";
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+.paragrapf {
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--paragrapf-color);
+  margin-top: 20px;
+}
 
 .section {
   min-height: 100vh;
@@ -382,7 +399,51 @@ ul {
   padding-bottom: 140px;
 }
 
-.overlay {
+.breadcrumbs {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+.breadcrumbs-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.breadcrumbs-item {
+  position: relative;
+  /* padding: 0 30px; */
+  padding-left: 40px;
+  padding-right: 20px;
+  color: var(--paragrapf-color);
+}
+.breadcrumbs-item:last-child {
+  padding-right: 0;
+}
+
+.breadcrumbs-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  /* right: 100%; */
+  left: 0;
+  height: 2px;
+  width: 20px;
+  background-color: #5d616d;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: -5px;
+}
+.breadcrumbs-item a {
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.breadcrumbs-item a:hover {
+  color: var(--contrast-color);
+}
+.overlay,
+.overlay1 {
   position: relative;
 }
 .overlay::before {
@@ -393,7 +454,10 @@ ul {
   width: 100%;
   height: 100%;
   background-color: var(--bg-overlay);
-  opacity: 0.7;
+  opacity: 0.8;
+}
+.overlay1::before {
+  background-color: var(--bg-black);
 }
 .section-img {
   background: url(../img/about_bg.jpg);
@@ -873,6 +937,71 @@ ul {
 #map {
   width: 100%;
 }
+
+/* FAQ SECTION */
+/*Добавляем поля*/
+.faq-section {
+  margin: 40px 0;
+}
+
+/*Скрываем чекбоксы и абзацы*/
+.faq-section input,
+.faq-section p {
+  display: none;
+}
+.faq-section label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--paragrapf-color);
+  opacity: 0.5;
+}
+/*Если чекбокс отмечен, показываем все абазацы*/
+.faq-section input[type="checkbox"]:checked ~ p {
+  display: block;
+}
+
+/*Стили для метки*/
+.faq-section label {
+  font-size: 1.2em;
+  color: var(--white);
+  cursor: pointer;
+  background: inherit;
+  display: block;
+  position: relative;
+  padding: 7px 10px;
+  border: none;
+  transition: all 0.15s ease-out;
+}
+
+/*Удаляем выделение текста при переключении*/
+.faq-section label::selection {
+  background: none;
+}
+
+/*Стрелка метки - состояние по умолчанию*/
+.faq-section label::before {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -6px;
+  border: 6px solid transparent;
+  border-left-color: inherit;
+}
+
+/*Обновляем стрелку справа*/
+.faq-section input[type="checkbox"]:checked ~ label::before {
+  border: 6px solid transparent;
+  border-top-color: inherit;
+  margin-top: -3px;
+  right: 10px;
+}
+/* END FAQ SECTION */
+
 @media (max-width: 1650px) {
   .fixed-menu {
     width: 100px;
@@ -918,6 +1047,15 @@ ul {
   }
   .header-nav {
     display: none;
+  }
+  .header-tel {
+    display: none;
+  }
+  .breadcrumbs {
+    padding-top: 0;
+  }
+  .breadcrumbs-nav {
+    justify-content: flex-start;
   }
   .wrapper {
     padding-left: 0;

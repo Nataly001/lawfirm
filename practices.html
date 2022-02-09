@@ -51,25 +51,26 @@
 
     <div class="wrapper">
       <div class="container">
-        <header class="header">
+        <header class="header page-header">
           <a href="index.html" class="logo">
             <img src="img/logo.png" alt="logo" />
           </a>
-          <!-- <nav class="header-nav">
-            <ul class="navigation">
-              <li class="navigation-item"><a href="index.html">Главная</a></li>
-              <li class="navigation-item"><a href="#">О нас</a></li>
-              <li class="navigation-item">
-                <a href="#">Области деятельности</a>
-              </li>
-              <li class="navigation-item"><a href="#">Команда</a></li>
-              <li class="navigation-item"><a href="#">Публикации</a></li>
-              <li class="navigation-item"><a href="#">Контакты</a></li>
-            </ul>
-          </nav> -->
+          <div class="header-tel">
+            <a href="tel:+3732340505">+373 234 05 05</a>
+          </div>
         </header>
       </div>
-      <section class="section1">
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs-nav">
+            <li class="breadcrumbs-item">
+              <a href="index.html" title="">Главная</a>
+            </li>
+            <li class="breadcrumbs-item"><span>О нас</span></li>
+          </ul>
+        </div>
+      </section>
+      <section class="section2">
         <div class="container">
           <div class="section-block1">
             <span class="pre-title">Область деятельности</span>
@@ -112,7 +113,9 @@
                 </div>
                 <div class="card-title">Семейное Право</div>
                 <div class="card-button">
-                  <a class="read-more-simple" href="#">подробнее</a>
+                  <a class="read-more-simple" href="practices-single.html?id=1"
+                    >подробнее</a
+                  >
                 </div>
               </div>
               <div class="card">
@@ -227,7 +230,7 @@
         </div>
       </section>
 
-      <section class="section1 overlay">
+      <section class="overlay overlay1">
         <div class="footer-img"></div>
         <div class="footer-info">
           <div class="footer-navigation">
@@ -305,10 +308,10 @@
         </div>
       </section>
     </div>
-    <script
+    <!-- <script
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
       type="text/javascript"
-    ></script>
+    ></script> -->
     <!-- <script type="text/javascript" src="js/script.js"></script> -->
   </body>
 </html>
