@@ -126,7 +126,7 @@ html body a:focus {
 }
 .mobile-menu {
   position: fixed;
-  top: 70px;
+  top: 60px;
   left: 55px;
   display: flex;
   align-items: center;
@@ -241,7 +241,7 @@ html body a:focus {
   position: relative;
   width: 100%;
   display: flex;
-  padding-top: 60px;
+  padding-top: 50px;
   /* padding-bottom: 30px; */
   justify-content: start;
   align-items: center;
@@ -369,6 +369,11 @@ html body a:focus {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+.flex-container1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 .heading {
   font-family: "MontserratAlternates";
@@ -397,6 +402,9 @@ html body a:focus {
 }
 .section2 {
   padding-bottom: 140px;
+}
+.section3 {
+  padding-bottom: 60px;
 }
 
 .breadcrumbs {
@@ -509,7 +517,9 @@ html body a:focus {
   transform: translateY(-50%);
 }
 .section-text {
+  padding-right: 20px;
   margin-bottom: 30px;
+  flex-basis: 80%;
 }
 .section-title {
   font-size: 48px;
@@ -517,6 +527,25 @@ html body a:focus {
   margin-top: 20px;
   width: 100%;
 }
+.section-links {
+  font-size: 14px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.section-links-item {
+  padding: 15px;
+}
+.section-links a {
+  color: var(--paragrapf-color);
+  opacity: 0.8;
+  transition: all 0.7s;
+}
+.section-links a:hover {
+  color: var(--contrast-color);
+}
+/* .section-links-item:not(:last-child) {
+  margin-bottom: 30px;
+} */
 .read-more,
 .read-more-simple {
   display: inline-block;
@@ -851,6 +880,18 @@ html body a:focus {
   background-size: cover;
   z-index: -1;
 }
+.footer-img1 {
+  background: url(../img/footer_bg1.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
 .footer-navigation {
   width: 100%;
   flex-shrink: 0;
@@ -883,6 +924,7 @@ html body a:focus {
   line-height: 170%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 /* .gradient-bg {
   background: linear-gradient(180deg, rgba(25, 28, 38, 0) 0%, #111319 76.56%);
@@ -891,8 +933,10 @@ html body a:focus {
   line-height: 150%;
 }
 .contacts span {
+  /* font-weight: bold; */
   display: inline-block;
   color: var(--white);
+
   margin-bottom: 8px;
 }
 .contacts p,
@@ -1034,6 +1078,18 @@ html body a:focus {
     margin-right: 0;
   }
 }
+@media (max-width: 1090px) {
+  .section-text {
+    flex-basis: 100%;
+  }
+  .section-links {
+    flex-basis: 100%;
+  }
+  .section-links-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 940px) {
   .fixed-menu {
     display: none;
@@ -1043,7 +1099,7 @@ html body a:focus {
     right: 15px;
   }
   .header {
-    padding: 60px 60px 60px 15px;
+    padding: 50px 60px 60px 15px;
   }
   .header-nav {
     display: none;
@@ -1079,6 +1135,12 @@ html body a:focus {
   }
 }
 @media (max-width: 780px) {
+  .main-banner-text {
+    max-width: 100%;
+  }
+  .main-banner-text h1 {
+    font-size: 60px;
+  }
   .publications-main {
     margin-top: 30px;
     flex-shrink: 1;
@@ -1086,5 +1148,22 @@ html body a:focus {
   }
   .card {
     flex-basis: 50%;
+  }
+}
+@media (max-width: 550px) {
+  .card {
+    flex-basis: 100%;
+  }
+  .contacts {
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .main-banner-text h1 {
+    font-size: 45px;
+  }
+  .section-title {
+    font-size: 40px;
   }
 }
