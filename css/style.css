@@ -530,14 +530,16 @@ html body a:focus {
 .section-links {
   font-size: 14px;
   padding: 10px 0;
+  background: var(--bg-overlay);
+  opacity: 0.7;
   cursor: pointer;
 }
 .section-links-item {
   padding: 15px;
+  /* background: var(--dark-blue); */
 }
 .section-links a {
   color: var(--paragrapf-color);
-  opacity: 0.8;
   transition: all 0.7s;
 }
 .section-links a:hover {
@@ -619,7 +621,6 @@ html body a:focus {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* flex-basis: 280px; */
   flex-basis: 25%;
   /* flex-grow: 1; */
   flex-shrink: 0;
@@ -635,6 +636,9 @@ html body a:focus {
 .card:nth-child(even) {
   background: linear-gradient(180deg, #080a12 0%, rgba(25, 28, 38, 0) 100%);
 }
+.card .icon {
+  margin-bottom: 70px;
+}
 .icon {
   width: 70px;
   height: 70px;
@@ -645,9 +649,6 @@ html body a:focus {
   height: 70px;
   fill: var(--paragrapf-color);
 }
-.card .icon {
-  margin-bottom: 70px;
-}
 .card-title {
   font-family: "MontserratAlternates";
   font-weight: 500;
@@ -657,6 +658,64 @@ html body a:focus {
   color: var(--paragrapf-color);
   text-align: center;
   margin-bottom: 45px;
+}
+.card-button {
+  display: inline-block;
+}
+.team-card {
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  flex-basis: 25%;
+  min-height: 450px;
+  /* flex-grow: 1; */
+  flex-shrink: 0;
+  box-shadow: 0 10px 10px rgb(0 0 0 / 25%);
+  transition: all 0.8s;
+}
+.team-card:hover {
+  transform: translateY(-10px);
+}
+.team-card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 490px;
+  background: linear-gradient(180deg, rgba(25, 28, 38, 0) 0%, #191c26 100%);
+  transition: all 1s;
+}
+.team-card:hover:before {
+  background: linear-gradient(180deg, rgba(8, 10, 18, 0) 0%, #b13636 100%);
+  mix-blend-mode: soft-light;
+}
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.team-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* text-align: center; */
+  z-index: 9;
+}
+.team-title {
+  font-family: "MontserratAlternates";
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--paragrapf-color);
+  margin-bottom: 25px;
 }
 .slider-buttons {
   position: absolute;
@@ -1069,7 +1128,8 @@ html body a:focus {
     margin-bottom: 60px;
     /* margin-top: 60px; */
   }
-  .card {
+  .card,
+  .team-card {
     flex-basis: 33.33%;
   }
 }
@@ -1146,12 +1206,14 @@ html body a:focus {
     flex-shrink: 1;
     flex-grow: 1;
   }
-  .card {
+  .card,
+  .team-card {
     flex-basis: 50%;
   }
 }
 @media (max-width: 550px) {
-  .card {
+  .card,
+  .team-card {
     flex-basis: 100%;
   }
   .contacts {
