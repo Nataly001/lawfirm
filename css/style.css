@@ -1004,6 +1004,7 @@ select option {
 .search-block select {
   background: none;
   padding: 10px;
+    font-size: 16px;
   border: 1px solid var(--contrast-color);
   border-radius: 20px;
   min-width: 350px;
@@ -1464,8 +1465,8 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-basis: 100%;
   }
   .contacts {
-    padding: 0 10px;
-    margin-bottom: 30px;
+    padding: 0;
+    /* margin-bottom: 30px; */
   }
 }
 @media (max-width: 500px) {
@@ -1481,4 +1482,23 @@ input[type="search"]::-webkit-search-cancel-button {
   .img-wrapper {
     max-height: 300px;
   }
+  .contact-list-item {
+    padding: 20px 10px;
+  }
+
+  .contact-list-item .icon {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+
+}
+.icon svg{
+  width: 40px;
+  height: 40px;
+}
+}
+@media (max-width: 400px) {
+  .search-block input, .search-block select {
+  min-width: 320px;
+}
 }
