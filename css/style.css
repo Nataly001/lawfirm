@@ -1180,7 +1180,7 @@ select option {
 .footer-nav .navigation .navigation-item a:hover,
 .navigation-item.footer-link a:hover {
   color: var(--paragrapf-color);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .footer-copyright {
